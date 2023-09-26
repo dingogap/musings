@@ -1,1 +1,1 @@
-# musings
+# Musings - a Social Network API
