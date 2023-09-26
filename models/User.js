@@ -12,8 +12,10 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
+            minLength: 10,
+            lowercase: true,
             match: [
-                /^[a-zA-Z0-9]+([\._-]?[a-zA-Z0-9]+)*@([a-zA-Z0-9]+[-]?[a-zA-Z0-9]+){1}([\.-]?[a-zA-Z0-9]+){0,2}([\.]?[a-zA-Z]+?){1}([\.]?[a-zA-Z]{2})?$/,
+                /^[a-z0-9]+([\._-]?[a-z0-9]+)*@([a-z0-9]+[-]?[a-z0-9]+){1}([\.-]?[a-z0-9]+){0,2}([\.]?[a-z]+?){1}([\.]?[a-z]{2})?$/,
                 'Invalid Email Address',
             ],
         },
