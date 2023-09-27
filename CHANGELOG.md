@@ -5,3 +5,4 @@
 3. Added additional validation to email & reduced regex complexity
 4. Added Reaction model
 5. Updated Thoughts model to include Reactions
+6. Add User and Thought Routes
