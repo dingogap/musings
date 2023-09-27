@@ -22,7 +22,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // create a new video
+  // create a new thought
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -87,7 +87,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // Add a video response
+  // Add a thought response
   async addThoughtResponse(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
