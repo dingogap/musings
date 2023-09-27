@@ -6,3 +6,4 @@
 4. Added Reaction model
 5. Updated Thoughts model to include Reactions
 6. Add User and Thought Routes
+7. Added Controllers - some not ready & so commented out
