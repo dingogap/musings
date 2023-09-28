@@ -41,7 +41,7 @@ module.exports = {
     try {
       const user = await User.findOneAndUpdate(
         { _id: req.params.userId },
-        { $addToSet: { thoughts: req.body } },
+        {$set: req.body},
         { runValidators: true, new: true }
       );
 
