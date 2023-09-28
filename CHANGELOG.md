@@ -1,4 +1,4 @@
-# Changlog for the Musings Social Network API
+# ChangeLog for the Musings Social Network API
 
 1. Created initial folder structure & files
 2. Added User and Thought models
@@ -14,3 +14,4 @@
 12. Updated Thought Route and thoughtController to remove a Reaction
 13. Updated User Route & userController to delete a User & associated Thoughts
 14. Corrected userController so User could be updated without adding phantom thoughts
+15. README.md updated
