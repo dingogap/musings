@@ -59,7 +59,14 @@ If you have questions about this project or would like more information you can 
 You can see more of my work in my [Github Repository](https://github.com/dingogap).
 
 ## Resources Used
-
+1. Boot Camp Materials - Lesson Material from Weeks 1 - 14
+2. Prior Knowledge and experience
+3. [MongoDb][def3] Documentation
+4. [MongooseJS][def4] Documentation
+5. [DayJS][def5] Documentation
 
 [def1]: https://vimeo.com/869157236
 [def2]: CHANGELOG.md
+[def3]: https://www.mongodb.com/docs/manual/
+[def4]: https://mongoosejs.com/docs/index.html
+[def5]: https://day.js.org/docs/en/installation/installation
