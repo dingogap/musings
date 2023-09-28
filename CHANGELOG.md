@@ -10,4 +10,5 @@
 8. Updated User Route & userController to add Thought and update user
 9. Updated User Route & userController to add a Friend
 10. Updated User Route & userController to remove a Friend
-11. Updated Thougght Route and thoughtController to add a Reaction
+11. Updated Thought Route and thoughtController to add a Reaction
+12. Updated Thought Route and thoughtController to remove a Reaction
