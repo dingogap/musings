@@ -23,6 +23,10 @@ Click the link to view the [Demonstration Video][def1]
 
 ## GitHub Repo URL
 
+## Musings GIF
+
+![The Tech Blog](/assets/musings.gif)
+
 ## ChangeLog
 
 Read the Musings [ChangeLog][def2]
