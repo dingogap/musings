@@ -47,6 +47,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // update thought
   async updateThought(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -65,6 +66,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // delete thought
   async deleteThought(req, res) {
     try {
       const thought = await Thought.findOneAndRemove({
@@ -74,7 +76,7 @@ module.exports = {
       if (!thought) {
         return res.status(404).json({ message: 'No thought with this id!' });
       }
-
+      // remove thoughtId from user
       const user = await User.findOneAndUpdate(
         { thoughts: req.params.thoughtId },
         { $pull: { thoughts: req.params.thoughtId } },
