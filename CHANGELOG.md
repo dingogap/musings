@@ -15,3 +15,4 @@
 13. Updated User Route & userController to delete a User & associated Thoughts
 14. Corrected userController so User could be updated without adding phantom thoughts
 15. README.md updated
+16. Added Video Demonstration
