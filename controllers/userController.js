@@ -1,6 +1,7 @@
-const User = require('../models/User');
+const { User, Thought } = require('../models');
 
 module.exports = {
+  // find all users
   async getUsers(req, res) {
     try {
       const users = await User.find();
@@ -9,6 +10,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // find a user
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId }).select(
@@ -38,7 +40,7 @@ module.exports = {
   async updateUser(req, res) {
     try {
       const user = await User.findOneAndUpdate(
-        { _id: req.params.id },
+        { _id: req.params.userId },
         { $addToSet: { thoughts: req.body } },
         { runValidators: true, new: true }
       );
@@ -55,6 +57,24 @@ module.exports = {
     }
   },
 
+  // delete a user and associated thoughts
+  async deleteUser(req, res) {
+    try {
+      const user = await User.findOneAndDelete(
+        { _id: req.params.userId },
+      );
+
+      if (!user) {
+        return res.status(404).json({ message: 'No user with that ID' });
+      }
+
+      await Thought.deleteMany({ _id: { $in: user.thoughts } });
+      res.json({ message: 'User and associated thoughts deleted!' });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
   // add a friend
   async addFriend(req, res) {
     try {
@@ -65,9 +85,7 @@ module.exports = {
       );
 
       if (!user) {
-        return res
-          .status(404)
-          .json({ message: 'No user found with that ID' });
+        return res.status(404).json({ message: 'No user found with that ID' });
       }
 
       res.json(user);
@@ -86,9 +104,7 @@ module.exports = {
       );
 
       if (!user) {
-        return res
-          .status(404)
-          .json({ message: 'No user found with that ID' });
+        return res.status(404).json({ message: 'No user found with that ID' });
       }
 
       res.json(user);
@@ -96,5 +112,4 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  
 };
