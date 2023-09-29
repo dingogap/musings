@@ -65,7 +65,7 @@ You can see more of my work in my [Github Repository](https://github.com/dingoga
 4. [MongooseJS][def4] Documentation
 5. [DayJS][def5] Documentation
 
-[def1]: https://vimeo.com/869157236
+[def1]: https://vimeo.com/869382119/
 [def2]: CHANGELOG.md
 [def3]: https://www.mongodb.com/docs/manual/
 [def4]: https://mongoosejs.com/docs/index.html

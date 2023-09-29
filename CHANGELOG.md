@@ -16,3 +16,4 @@
 14. Corrected userController so User could be updated without adding phantom thoughts
 15. README.md updated
 16. Added Video Demonstration
+17. Updated video demonstration including the delete user and associated thoughts functionality included in original uploads
